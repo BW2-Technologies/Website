@@ -1,0 +1,5 @@
+title: BW2 Website
+description: Enterprise Application Development Platform
+theme: jekyll-theme-primer # Optional, but good standard fallback
+markdown: kramdown
+permalink: pretty
