@@ -1,0 +1,75 @@
+<nav class="fixed w-full z-50 transition-all duration-300 glass-header border-b border-white/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-20">
+            <!-- Logo -->
+            <a href="/" class="flex items-center gap-2 cursor-pointer">
+                <img src="https://cdn.prod.website-files.com/685027b1adf6860272c07436/687e85b82eeff8598eb71955_BW2_Logo2.svg" 
+                     alt="BW2" class="h-8 md:h-10 w-auto">
+            </a>
+
+            <!-- Desktop Menu -->
+            <div class="hidden lg:flex items-center space-x-8">
+                
+                <!-- 1. Features Dropdown (Grouped) -->
+                <div class="relative group">
+                    <button class="text-sm font-medium hover:text-white transition-colors flex items-center gap-1 py-4">
+                        Features <i class="fas fa-chevron-down text-[10px] opacity-50 ml-1"></i>
+                    </button>
+                    <div class="absolute left-0 top-full w-48 rounded-xl bg-dark-900 border border-white/10 shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-2 group-hover:translate-y-0 p-2 z-50">
+                        <a href="#platform" class="block px-4 py-2 text-sm text-slate-300 hover:bg-white/5 hover:text-white rounded-lg transition-colors">Platform Overview</a>
+                        <a href="#use-cases" class="block px-4 py-2 text-sm text-slate-300 hover:bg-white/5 hover:text-white rounded-lg transition-colors">Use Cases</a>
+                        <a href="#about" class="block px-4 py-2 text-sm text-slate-300 hover:bg-white/5 hover:text-white rounded-lg transition-colors">About</a>
+                    </div>
+                </div>
+
+                <!-- 2. Business Model Dropdown -->
+                <div class="relative group">
+                    <button class="text-sm font-medium hover:text-white transition-colors flex items-center gap-1 py-4">
+                        Business Model <i class="fas fa-chevron-down text-[10px] opacity-50 ml-1"></i>
+                    </button>
+                    <div class="absolute left-0 top-full w-56 rounded-xl bg-dark-900 border border-white/10 shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-2 group-hover:translate-y-0 p-2 z-50">
+                        <a href="licensing.html" class="block px-4 py-2 text-sm text-slate-300 hover:bg-white/5 hover:text-white rounded-lg transition-colors">Software Licensing</a>
+                        <a href="#" class="block px-4 py-2 text-sm text-slate-300 hover:bg-white/5 hover:text-white rounded-lg transition-colors">Hosting</a>
+                        <a href="co-create.html" class="block px-4 py-2 text-sm text-slate-300 hover:bg-white/5 hover:text-white rounded-lg transition-colors">Co-Creation Program</a>
+                        <a href="#" class="block px-4 py-2 text-sm text-slate-300 hover:bg-white/5 hover:text-white rounded-lg transition-colors">BW2 Difference</a>
+                    </div>
+                </div>
+
+                <!-- 3. For Partners Dropdown -->
+                <div class="relative group">
+                    <button class="text-sm font-medium hover:text-white transition-colors flex items-center gap-1 py-4">
+                        For Partners <i class="fas fa-chevron-down text-[10px] opacity-50 ml-1"></i>
+                    </button>
+                    <div class="absolute left-0 top-full w-60 rounded-xl bg-dark-900 border border-white/10 shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-2 group-hover:translate-y-0 p-2 z-50">
+                        <a href="#partners" class="block px-4 py-2 text-sm text-slate-300 hover:bg-white/5 hover:text-white rounded-lg transition-colors">For Software Vendors</a>
+                        <a href="#partners" class="block px-4 py-2 text-sm text-slate-300 hover:bg-white/5 hover:text-white rounded-lg transition-colors">For Integrators</a>
+                        <a href="co-create.html" class="block px-4 py-2 text-sm text-slate-300 hover:bg-white/5 hover:text-white rounded-lg transition-colors">For Industry Experts</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA & Mobile Toggle -->
+            <div class="flex items-center gap-4">
+                <a href="#contact"
+                    class="hidden md:block bg-white text-dark-900 hover:bg-brand-50 px-5 py-2.5 rounded-full text-sm font-bold transition-all shadow-lg shadow-brand-500/20">
+                    Contact Us
+                </a>
+                <button class="lg:hidden text-white p-2"
+                    onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden lg:hidden glass-header border-t border-white/10 p-4 space-y-4 max-h-[80vh] overflow-y-auto">
+        <a href="#platform" class="block text-sm font-medium hover:text-white text-slate-300">Features</a>
+        <a href="#use-cases" class="block text-sm font-medium hover:text-white text-slate-300">Use Cases</a>
+        <a href="#about" class="block text-sm font-medium hover:text-white text-slate-300">About</a>
+        <div class="border-t border-white/10 my-2"></div>
+        <a href="licensing.html" class="block text-sm font-medium hover:text-white text-slate-300">Software Licensing</a>
+        <a href="co-create.html" class="block text-sm font-medium hover:text-white text-slate-300">Co-Creation</a>
+        <a href="#partners" class="block text-sm font-medium hover:text-white text-slate-300">For Partners</a>
+    </div>
+</nav>
