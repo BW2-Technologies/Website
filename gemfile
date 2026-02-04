@@ -1,0 +1,4 @@
+source "https://rubygems.org"
+
+# This installs the exact same version/plugins GitHub uses
+gem "github-pages", group: :jekyll_plugins
