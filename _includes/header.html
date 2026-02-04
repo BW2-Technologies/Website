@@ -1,19 +1,21 @@
 <nav class="fixed w-full z-50 transition-all duration-300 glass-header border-b border-white/5">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between items-center h-20">
-            <!-- Logo -->
+        <!-- Updated Header Height to h-16 (64px) -->
+        <div class="flex justify-between items-center h-16">
+            <!-- Logo - Updated size to h-6 md:h-8 -->
             <a href="/index" class="flex items-center gap-2 cursor-pointer" onclick="window.scrollTo(0,0)">
-                <img src="https://cdn.prod.website-files.com/685027b1adf6860272c07436/687e85b82eeff8598eb71955_BW2_Logo2.svg" 
-                     alt="BW2" class="h-8 md:h-10 w-auto">
+                <img src="https://cdn.prod.website-files.com/685027b1adf6860272c07436/687e85b82eeff8598eb71955_BW2_Logo2.svg"
+                     alt="BW2" class="h-6 md:h-8 w-auto">
             </a>
 
             <!-- Desktop Menu -->
             <div class="hidden lg:flex items-center space-x-8">
                 <a href="/features" class="text-sm font-medium hover:text-white transition-colors">Features</a>
-                
+
                 <!-- Dropdown: Business Model -->
                 <div class="relative group">
-                    <button class="text-sm font-medium hover:text-white transition-colors flex items-center gap-1 py-4">
+                    <!-- Updated py-4 to py-3 -->
+                    <button class="text-sm font-medium hover:text-white transition-colors flex items-center gap-1 py-3">
                         Business Model <i class="fas fa-chevron-down text-[10px] opacity-50 ml-1"></i>
                     </button>
                     <div class="absolute left-0 top-full w-56 rounded-xl bg-dark-900 border border-white/10 shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-2 group-hover:translate-y-0 p-2 z-50">
@@ -25,7 +27,8 @@
 
                 <!-- Dropdown: For Partners -->
                 <div class="relative group">
-                    <button class="text-sm font-medium hover:text-white transition-colors flex items-center gap-1 py-4">
+                    <!-- Updated py-4 to py-3 -->
+                    <button class="text-sm font-medium hover:text-white transition-colors flex items-center gap-1 py-3">
                         For Partners <i class="fas fa-chevron-down text-[10px] opacity-50 ml-1"></i>
                     </button>
                     <div class="absolute left-0 top-full w-60 rounded-xl bg-dark-900 border border-white/10 shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-2 group-hover:translate-y-0 p-2 z-50">
@@ -42,14 +45,15 @@
 
             <!-- CTA & Mobile Toggle -->
             <div class="flex items-center gap-4">
+                <!-- Updated Button Size: px-4 py-2 text-xs -->
                 <a href="/contact"
-                    class="hidden md:block bg-white text-dark-900 hover:bg-brand-50 px-5 py-2.5 rounded-full text-sm font-bold transition-all shadow-lg shadow-brand-500/20">
+                   class="hidden md:block bg-white text-dark-900 hover:bg-brand-50 px-4 py-2 rounded-full text-xs font-bold transition-all shadow-lg shadow-brand-500/20">
                     Contact Us
                 </a>
                 <!-- Mobile Menu Button -->
                 <button class="lg:hidden text-white p-2"
-                    onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
-                    <i class="fas fa-bars text-xl"></i>
+                        onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+                    <i class="fas fa-bars text-lg"></i>
                 </button>
             </div>
         </div>
@@ -57,7 +61,7 @@
     <!-- Mobile Menu -->
     <div id="mobile-menu" class="hidden lg:hidden glass-header border-t border-white/10 p-4 space-y-4 max-h-[80vh] overflow-y-auto">
         <a href="/features" class="block text-sm font-medium hover:text-white text-slate-300">Features</a>
-        
+
         <div class="py-2 border-t border-white/5 border-b">
             <p class="text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">Business Model</p>
             <a href="/software-licensing" class="block pl-4 py-2 text-sm text-slate-300 hover:text-white">Software Licensing</a>
