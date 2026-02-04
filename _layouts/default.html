@@ -3,8 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- The page title is pulled dynamically from your content file -->
+
+    <!-- SEO & Meta Tags -->
     <title>{{ page.title }}</title>
+    {% if page.description %}
+    <meta name="description" content="{{ page.description }}">
+    {% endif %}
+    {% if page.keywords %}
+    <meta name="keywords" content="{{ page.keywords }}">
+    {% endif %}
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="{{ page.title }}">
+    {% if page.description %}
+    <meta property="og:description" content="{{ page.description }}">
+    {% endif %}
+    {% if page.image %}
+    <meta property="og:image" content="{{ page.image }}">
+    {% endif %}
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ page.title }}">
+    {% if page.description %}
+    <meta name="twitter:description" content="{{ page.description }}">
+    {% endif %}
+    {% if page.image %}
+    <meta name="twitter:image" content="{{ page.image }}">
+    {% endif %}
 
     <!-- Fonts: Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
