@@ -1,41 +1,39 @@
-<nav class="fixed w-full z-50 transition-all duration-300 glass-header border-b border-white/5">
+<nav class="fixed w-full z-50 transition-all duration-300 glass-header border-b border-white/5" x-data="{ mobileMenuOpen: false }">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <!-- Updated Header Height to h-16 (64px) -->
         <div class="flex justify-between items-center h-16">
-            <!-- Logo - Updated size to h-6 md:h-8 -->
             <a href="/index" class="flex items-center gap-2 cursor-pointer" onclick="window.scrollTo(0,0)">
                 <img src="{{ site.baseurl }}/assets/bw2.svg"
                      alt="BW2" class="h-6 md:h-8 w-auto">
             </a>
 
-            <!-- Desktop Menu -->
-            <div class="hidden lg:flex items-center space-x-8">
-                <a href="/features" class="text-sm font-medium hover:text-white transition-colors">Features</a>
+            <div class="hidden lg:flex items-center space-x-6 xl:space-x-8">
+                <a href="/features" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">Features</a>
 
-                <!-- Dropdown: Business Model -->
+                <a href="/co-creation-program" class="text-sm font-bold text-brand-400 hover:text-brand-300 transition-colors flex items-center gap-1">
+                    Co-Creation <span class="bg-brand-500/10 text-brand-500 text-[10px] px-1.5 py-0.5 rounded border border-brand-500/20 uppercase">Partner</span>
+                </a>
+
                 <div class="relative group">
-                    <!-- Updated py-4 to py-3 -->
-                    <button class="text-sm font-medium hover:text-white transition-colors flex items-center gap-1 py-3">
-                        Business Model <i class="fas fa-chevron-down text-[10px] opacity-50 ml-1"></i>
+                    <button class="text-sm font-medium text-slate-300 hover:text-white transition-colors flex items-center gap-1 py-3">
+                        Hosting & Licensing <i class="fas fa-chevron-down text-[10px] opacity-50 ml-1 group-hover:rotate-180 transition-transform duration-200"></i>
                     </button>
-                    <!-- Changed w-56 to w-max and added whitespace-nowrap to links -->
                     <div class="absolute left-0 top-full w-max rounded-xl bg-dark-900 border border-white/10 shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-2 group-hover:translate-y-0 p-2 z-50">
-                        <a href="/software-licensing" class="block px-4 py-2 text-sm text-slate-300 hover:bg-white/5 hover:text-white rounded-lg transition-colors whitespace-nowrap">Software Licensing</a>
-                        <a href="/cloud-and-management-tools" class="block px-4 py-2 text-sm text-slate-300 hover:bg-white/5 hover:text-white rounded-lg transition-colors whitespace-nowrap">Cloud and Management Tools</a>
-                        <a href="/co-creation-program" class="block px-4 py-2 text-sm text-slate-300 hover:bg-white/5 hover:text-white rounded-lg transition-colors whitespace-nowrap">Co-Creation Program</a>
+                        <a href="/software-licensing" class="block px-4 py-2 text-sm text-slate-300 hover:bg-white/5 hover:text-white rounded-lg transition-colors whitespace-nowrap">
+                            <i class="fas fa-key w-4 text-slate-500 mr-2"></i>Software Licensing
+                        </a>
+                        <a href="/cloud-and-management-tools" class="block px-4 py-2 text-sm text-slate-300 hover:bg-white/5 hover:text-white rounded-lg transition-colors whitespace-nowrap">
+                            <i class="fas fa-server w-4 text-slate-500 mr-2"></i>Cloud & Private Tools
+                        </a>
                     </div>
                 </div>
 
-                <!-- Dropdown: For Partners -->
                 <div class="relative group">
-                    <!-- Updated py-4 to py-3 -->
-                    <button class="text-sm font-medium hover:text-white transition-colors flex items-center gap-1 py-3">
-                        Information For <i class="fas fa-chevron-down text-[10px] opacity-50 ml-1"></i>
+                    <button class="text-sm font-medium text-slate-300 hover:text-white transition-colors flex items-center gap-1 py-3">
+                        Information For <i class="fas fa-chevron-down text-[10px] opacity-50 ml-1 group-hover:rotate-180 transition-transform duration-200"></i>
                     </button>
-                    <!-- Changed w-60 to w-max and added whitespace-nowrap to links -->
                     <div class="absolute left-0 top-full w-max rounded-xl bg-dark-900 border border-white/10 shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-2 group-hover:translate-y-0 p-2 z-50">
                         <a href="/for-software-vendors" class="block px-4 py-2 text-sm text-slate-300 hover:bg-white/5 hover:text-white rounded-lg transition-colors whitespace-nowrap">Software Vendors</a>
-                        <a href="/for-custom-software-factories" class="block px-4 py-2 text-sm text-slate-300 hover:bg-white/5 hover:text-white rounded-lg transition-colors whitespace-nowrap">Custom Software Developers</a>
+                        <a href="/for-custom-software-factories" class="block px-4 py-2 text-sm text-slate-300 hover:bg-white/5 hover:text-white rounded-lg transition-colors whitespace-nowrap">Custom Software Factories</a>
                         <a href="/for-software-resellers" class="block px-4 py-2 text-sm text-slate-300 hover:bg-white/5 hover:text-white rounded-lg transition-colors whitespace-nowrap">Business Software Resellers</a>
                         <a href="/for-industry-experts" class="block px-4 py-2 text-sm text-slate-300 hover:bg-white/5 hover:text-white rounded-lg transition-colors whitespace-nowrap">Industry Experts</a>
                         <a href="/for-industry-leaders" class="block px-4 py-2 text-sm text-slate-300 hover:bg-white/5 hover:text-white rounded-lg transition-colors whitespace-nowrap">Industry Leaders</a>
@@ -43,37 +41,38 @@
                     </div>
                 </div>
 
-                <a href="/about-bw2" class="text-sm font-medium hover:text-white transition-colors">About BW2</a>
+                <a href="/about-bw2" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">About BW2</a>
             </div>
 
-            <!-- CTA & Mobile Toggle -->
             <div class="flex items-center gap-4">
-                <!-- Updated Button Size: px-4 py-2 text-xs -->
                 <a href="/contact"
                    class="hidden md:block bg-white text-dark-900 hover:bg-brand-50 px-4 py-2 rounded-full text-xs font-bold transition-all shadow-lg shadow-brand-500/20">
                     Contact Us
                 </a>
-                <!-- Mobile Menu Button -->
-                <button class="lg:hidden text-white p-2"
-                        onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
-                    <i class="fas fa-bars text-lg"></i>
+
+                <button class="lg:hidden text-white p-2 focus:outline-none"
+                        onclick="toggleMobileMenu(this)">
+                    <i class="fas fa-bars text-xl transition-transform duration-200" id="mobile-icon"></i>
                 </button>
             </div>
         </div>
     </div>
-    <!-- Mobile Menu -->
-    <div id="mobile-menu" class="hidden lg:hidden glass-header border-t border-white/10 p-4 space-y-4 max-h-[80vh] overflow-y-auto">
+
+    <div id="mobile-menu" class="hidden lg:hidden glass-header border-t border-white/10 p-4 space-y-4 max-h-[85vh] overflow-y-auto shadow-2xl">
         <a href="/features" class="block text-sm font-medium hover:text-white text-slate-300">Features</a>
 
+        <a href="/co-creation-program" class="block text-sm font-bold text-brand-400 hover:text-brand-300">
+            Co-Creation Program <span class="text-xs font-normal text-slate-500 ml-2">(Partnership)</span>
+        </a>
+
         <div class="py-2 border-t border-white/5 border-b">
-            <p class="text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">Business Model</p>
+            <p class="text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">Hosting & Licensing</p>
             <a href="/software-licensing" class="block pl-4 py-2 text-sm text-slate-300 hover:text-white">Software Licensing</a>
-            <a href="/cloud-and-management-tools" class="block pl-4 py-2 text-sm text-slate-300 hover:text-white">Cloud and Management Tools</a>
-            <a href="/co-creation-program" class="block pl-4 py-2 text-sm text-slate-300 hover:text-white">Co-Creation Program</a>
+            <a href="/cloud-and-management-tools" class="block pl-4 py-2 text-sm text-slate-300 hover:text-white">Cloud & Private Tools</a>
         </div>
 
         <div class="py-2 border-b border-white/5">
-            <p class="text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">For Partners</p>
+            <p class="text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">Information For</p>
             <a href="/for-software-vendors" class="block pl-4 py-2 text-sm text-slate-300 hover:text-white">Software Vendors</a>
             <a href="/for-custom-software-factories" class="block pl-4 py-2 text-sm text-slate-300 hover:text-white">Custom Software Factories</a>
             <a href="/for-software-resellers" class="block pl-4 py-2 text-sm text-slate-300 hover:text-white">Business Software Resellers</a>
@@ -82,7 +81,24 @@
             <a href="/for-industry-associations" class="block pl-4 py-2 text-sm text-slate-300 hover:text-white">Associations</a>
         </div>
 
-        <a href="/about-bw2" class="block text-sm font-medium hover:text-white text-slate-300">About</a>
+        <a href="/about-bw2" class="block text-sm font-medium hover:text-white text-slate-300">About BW2</a>
         <a href="/contact" class="block text-center bg-white text-dark-900 py-3 rounded-lg font-bold mt-4">Contact Us</a>
     </div>
+
+    <script>
+        function toggleMobileMenu(btn) {
+            const menu = document.getElementById('mobile-menu');
+            const icon = document.getElementById('mobile-icon');
+
+            menu.classList.toggle('hidden');
+
+            if (menu.classList.contains('hidden')) {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            } else {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            }
+        }
+    </script>
 </nav>
