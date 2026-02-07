@@ -31,53 +31,10 @@ description: "Accelerate enterprise development with BW2: An integrated .NET pla
                class="px-8 py-4 rounded-full bg-brand-600 hover:bg-brand-500 text-white font-semibold text-lg transition-all shadow-lg shadow-brand-500/25 flex items-center justify-center gap-2">
                 Explore Features <i class="fas fa-arrow-down"></i>
             </a>
-        </div>
-
-        <!-- UI Placeholder / Visual -->
-        <div class="mt-16 mx-auto max-w-5xl relative group">
-            <div
-                    class="absolute -inset-1 bg-gradient-to-r from-brand-500 to-indigo-600 rounded-xl blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200">
-            </div>
-            <div
-                    class="relative rounded-xl bg-dark-900 border border-white/10 shadow-2xl overflow-hidden aspect-[16/9] flex flex-col">
-                <!-- Top Bar -->
-                <div class="h-10 border-b border-white/5 bg-dark-800 flex items-center px-4 gap-2">
-                    <div class="w-3 h-3 rounded-full bg-red-500/50"></div>
-                    <div class="w-3 h-3 rounded-full bg-yellow-500/50"></div>
-                    <div class="w-3 h-3 rounded-full bg-green-500/50"></div>
-                    <div class="ml-4 w-64 h-6 rounded bg-white/5"></div>
-                </div>
-                <!-- UI Body -->
-                <div class="flex flex-1 overflow-hidden">
-                    <!-- Sidebar -->
-                    <div class="w-16 md:w-64 border-r border-white/5 bg-dark-800/50 p-4 space-y-4 hidden md:block">
-                        <div class="h-8 rounded bg-brand-500/20 w-3/4"></div>
-                        <div class="h-4 rounded bg-white/5 w-full"></div>
-                        <div class="h-4 rounded bg-white/5 w-5/6"></div>
-                        <div class="h-4 rounded bg-white/5 w-4/5"></div>
-                        <div class="mt-8 h-4 rounded bg-white/5 w-full"></div>
-                        <div class="h-4 rounded bg-white/5 w-5/6"></div>
-                    </div>
-                    <!-- Main Content -->
-                    <div class="flex-1 p-6 grid grid-cols-3 gap-6">
-                        <div
-                                class="col-span-3 h-32 rounded-lg bg-gradient-to-r from-brand-900/20 to-indigo-900/20 border border-white/5 flex items-center justify-center">
-                            <span class="text-brand-500 font-mono text-sm">Dashboard Analytics Visualization</span>
-                        </div>
-                        <div class="col-span-2 h-64 rounded-lg bg-dark-800/50 border border-white/5 p-4 space-y-3">
-                            <div class="h-4 bg-white/5 rounded w-1/3 mb-4"></div>
-                            <div class="h-8 bg-white/5 rounded w-full"></div>
-                            <div class="h-8 bg-white/5 rounded w-full"></div>
-                            <div class="h-8 bg-white/5 rounded w-full"></div>
-                            <div class="h-8 bg-white/5 rounded w-full"></div>
-                        </div>
-                        <div class="col-span-1 h-64 rounded-lg bg-dark-800/50 border border-white/5 p-4">
-                            <div class="h-32 w-32 rounded-full border-4 border-indigo-500/30 mx-auto mb-4"></div>
-                            <div class="h-4 bg-white/5 rounded w-1/2 mx-auto"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <a href="#ui"
+               class="px-8 py-4 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 text-white font-semibold text-lg transition-all backdrop-blur-sm flex items-center justify-center gap-2">
+                Explore the User Interface <i class="fas fa-images"></i>
+            </a>
         </div>
     </div>
 </section>
@@ -443,24 +400,204 @@ description: "Accelerate enterprise development with BW2: An integrated .NET pla
     </div>
 </section>
 
-<!-- UI Gallery / CTA -->
+<!-- UI Gallery -->
 <section id="ui" class="py-24 bg-dark-800 relative border-t border-white/5">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 class="text-3xl md:text-5xl font-bold text-white mb-6">Explore the User Interface</h2>
-        <p class="text-slate-400 mb-12 max-w-2xl mx-auto">
-            Move past one-size-fits-all software. See how powerful standard features and unique custom solutions
-            come together to create a seamless user experience.
-        </p>
-
-        <div class="mt-8 flex flex-col sm:flex-row justify-center gap-4">
-            <a href="/contact"
-               class="px-10 py-5 bg-white text-brand-900 font-bold rounded-full hover:bg-brand-50 transition-all shadow-xl transform hover:scale-105">
-                Schedule Your Demo
-            </a>
-            <button
-                    class="px-10 py-5 bg-transparent border border-white text-white font-bold rounded-full hover:bg-white/10 transition-all">
-                View Gallery
-            </button>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-5xl font-bold text-white mb-6">Explore the User Interface</h2>
+            <p class="text-slate-400 max-w-2xl mx-auto">
+                Move past one-size-fits-all software. See how powerful standard features and unique custom solutions
+                come together to create a seamless user experience.
+            </p>
         </div>
+
+        <!-- Carousel Container -->
+        <div class="relative max-w-5xl mx-auto mb-16 group" id="ui-carousel">
+            <!-- Main Slide Window -->
+            <div class="relative overflow-hidden rounded-2xl border border-white/10 shadow-2xl bg-dark-900 aspect-video md:aspect-[16/9]">
+
+                <!-- Slides Track -->
+                <div id="carousel-track" class="flex transition-transform duration-500 ease-out h-full">
+
+                    <!-- Slide 1: Projects -->
+                    <div class="min-w-full h-full relative">
+                        <img src="https://cdn.prod.website-files.com/685027b1adf6860272c07436/6879a7c23f925c1f3358507a_Projects.webp" alt="Projects" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-dark-900/90 via-transparent to-transparent"></div>
+                        <div class="absolute bottom-20 left-8 right-8">
+                            <span class="inline-block px-2 py-1 mb-2 text-xs font-bold text-brand-400 uppercase tracking-wider bg-black/50 backdrop-blur-md rounded border border-brand-500/30">Management</span>
+                            <h3 class="text-2xl font-bold text-white mb-1">Project Overview</h3>
+                            <p class="text-slate-300 text-sm md:text-base">Comprehensive dashboards for tracking tasks, resources, and budgets.</p>
+                        </div>
+                    </div>
+
+                    <!-- Slide 2: Mobile -->
+                    <div class="min-w-full h-full relative">
+                        <img src="https://cdn.prod.website-files.com/685027b1adf6860272c07436/6879a24de7fa3cb2e4401299_Mobile%20App.webp" alt="Mobile App" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-dark-900/90 via-transparent to-transparent"></div>
+                        <div class="absolute bottom-20 left-8 right-8">
+                            <span class="inline-block px-2 py-1 mb-2 text-xs font-bold text-green-400 uppercase tracking-wider bg-black/50 backdrop-blur-md rounded border border-green-500/30">Mobile</span>
+                            <h3 class="text-2xl font-bold text-white mb-1">Native Experience</h3>
+                            <p class="text-slate-300 text-sm md:text-base">Full functionality on the go with dedicated iOS and Android apps.</p>
+                        </div>
+                    </div>
+
+                    <!-- Slide 3: Emails -->
+                    <div class="min-w-full h-full relative">
+                        <img src="https://cdn.prod.website-files.com/685027b1adf6860272c07436/6879a7c23055c1b0d9a24376_Emails.webp" alt="Emails" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-dark-900/90 via-transparent to-transparent"></div>
+                        <div class="absolute bottom-20 left-8 right-8">
+                            <span class="inline-block px-2 py-1 mb-2 text-xs font-bold text-indigo-400 uppercase tracking-wider bg-black/50 backdrop-blur-md rounded border border-indigo-500/30">Communication</span>
+                            <h3 class="text-2xl font-bold text-white mb-1">Email Integration</h3>
+                            <p class="text-slate-300 text-sm md:text-base">Seamlessly integrated communication within your business workflow.</p>
+                        </div>
+                    </div>
+
+                    <!-- Slide 4: Meetings -->
+                    <div class="min-w-full h-full relative">
+                        <img src="https://cdn.prod.website-files.com/685027b1adf6860272c07436/6879a7c2778c71afc6923b38_Meetings.webp" alt="Meetings" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-dark-900/90 via-transparent to-transparent"></div>
+                        <div class="absolute bottom-20 left-8 right-8">
+                            <span class="inline-block px-2 py-1 mb-2 text-xs font-bold text-purple-400 uppercase tracking-wider bg-black/50 backdrop-blur-md rounded border border-purple-500/30">Scheduling</span>
+                            <h3 class="text-2xl font-bold text-white mb-1">Smart Calendar</h3>
+                            <p class="text-slate-300 text-sm md:text-base">Effortless meeting scheduling and calendar management.</p>
+                        </div>
+                    </div>
+
+                    <!-- Slide 5: Custom Solution -->
+                    <div class="min-w-full h-full relative">
+                        <img src="https://cdn.prod.website-files.com/685027b1adf6860272c07436/6879a24d5dec89047471f680_Custom%20Solution%202.webp" alt="Custom Solution" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-dark-900/90 via-transparent to-transparent"></div>
+                        <div class="absolute bottom-20 left-8 right-8">
+                            <span class="inline-block px-2 py-1 mb-2 text-xs font-bold text-orange-400 uppercase tracking-wider bg-black/50 backdrop-blur-md rounded border border-orange-500/30">Flexibility</span>
+                            <h3 class="text-2xl font-bold text-white mb-1">Custom Solutions</h3>
+                            <p class="text-slate-300 text-sm md:text-base">Tailor-made interfaces that adapt to your specific industry needs.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Navigation Buttons -->
+                <button onclick="prevSlide()" class="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 md:w-12 md:h-12 bg-black/30 hover:bg-black/60 backdrop-blur-sm border border-white/10 text-white rounded-full flex items-center justify-center transition-all opacity-0 group-hover:opacity-100 focus:opacity-100 z-10">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button onclick="nextSlide()" class="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 md:w-12 md:h-12 bg-black/30 hover:bg-black/60 backdrop-blur-sm border border-white/10 text-white rounded-full flex items-center justify-center transition-all opacity-0 group-hover:opacity-100 focus:opacity-100 z-10">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+
+                <!-- Bottom Controls: Dots + Play Button -->
+                <div class="absolute bottom-6 left-1/2 -translate-x-1/2 flex items-center gap-3 z-30 px-4 py-2 rounded-full bg-black/20 backdrop-blur-sm border border-white/5 hover:bg-black/40 transition-colors">
+                    <button onclick="toggleAutoPlay()" class="w-6 h-6 flex items-center justify-center text-white/70 hover:text-white transition-colors focus:outline-none" title="Toggle Auto-Play">
+                        <i class="fas fa-pause text-xs" id="play-pause-icon"></i>
+                    </button>
+                    <div class="w-px h-3 bg-white/20"></div>
+                    <div class="flex space-x-2" id="carousel-dots">
+                        <!-- Dots injected by JS -->
+                    </div>
+                </div>
+            </div>
+        </div>
+</section>
+
+<!-- New CTA Section -->
+<section class="py-24 relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-b from-dark-900 to-brand-900/30"></div>
+    <!-- Decorative background elements -->
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-3xl h-full bg-brand-500/5 blur-[100px] rounded-full pointer-events-none"></div>
+
+    <div class="max-w-4xl mx-auto px-4 relative z-10 text-center">
+        <h2 class="text-3xl md:text-5xl font-bold text-white mb-6 tracking-tight">Ready to Transform Your Development?</h2>
+        <p class="text-slate-400 text-lg mb-10 max-w-2xl mx-auto">
+            Stop building plumbing and start delivering value. See how BW2 can accelerate your enterprise software projects.
+        </p>
+        <a href="/contact"
+           class="inline-block px-12 py-5 bg-white text-brand-900 font-bold rounded-full hover:bg-brand-50 transition-all shadow-2xl shadow-brand-500/20 transform hover:scale-105 hover:-translate-y-1">
+            Schedule Your Demo
+        </a>
     </div>
 </section>
+
+<!-- Carousel Script -->
+<script>
+    const track = document.getElementById('carousel-track');
+    const dotsContainer = document.getElementById('carousel-dots');
+    const slides = track.children;
+    const slideCount = slides.length;
+    let currentIndex = 0;
+    let autoPlayInterval;
+    let isPlaying = true;
+    const playPauseIcon = document.getElementById('play-pause-icon');
+
+    // Create dots
+    for (let i = 0; i < slideCount; i++) {
+        const dot = document.createElement('button');
+        dot.className = `w-2 h-2 rounded-full transition-all duration-300 ${i === 0 ? 'bg-white w-6' : 'bg-white/40 hover:bg-white/80'}`;
+        dot.onclick = () => goToSlide(i);
+        dotsContainer.appendChild(dot);
+    }
+
+    const dots = dotsContainer.children;
+
+    function toggleAutoPlay() {
+        if (isPlaying) {
+            clearInterval(autoPlayInterval);
+            playPauseIcon.classList.remove('fa-pause');
+            playPauseIcon.classList.add('fa-play');
+            // Visual adjustment: center the play icon slightly
+            playPauseIcon.style.paddingLeft = "4px";
+            isPlaying = false;
+        } else {
+            startTimer();
+            playPauseIcon.classList.remove('fa-play');
+            playPauseIcon.classList.add('fa-pause');
+            playPauseIcon.style.paddingLeft = "0";
+            isPlaying = true;
+        }
+    }
+
+    function updateCarousel() {
+        const offset = -(currentIndex * 100);
+        track.style.transform = `translateX(${offset}%)`;
+
+        // Update dots
+        Array.from(dots).forEach((dot, index) => {
+            if (index === currentIndex) {
+                dot.className = 'w-6 h-2 rounded-full transition-all duration-300 bg-white';
+            } else {
+                dot.className = 'w-2 h-2 rounded-full transition-all duration-300 bg-white/40 hover:bg-white/80';
+            }
+        });
+    }
+
+    function nextSlide() {
+        currentIndex = (currentIndex + 1) % slideCount;
+        updateCarousel();
+        resetTimer();
+    }
+
+    function prevSlide() {
+        currentIndex = (currentIndex - 1 + slideCount) % slideCount;
+        updateCarousel();
+        resetTimer();
+    }
+
+    function goToSlide(index) {
+        currentIndex = index;
+        updateCarousel();
+        resetTimer();
+    }
+
+    function startTimer() {
+        autoPlayInterval = setInterval(nextSlide, 5000); // 5 seconds
+    }
+
+    function resetTimer() {
+        clearInterval(autoPlayInterval);
+        // Only restart timer if we are currently in "playing" mode
+        if (isPlaying) {
+            startTimer();
+        }
+    }
+
+    // Start
+    startTimer();
+</script>
