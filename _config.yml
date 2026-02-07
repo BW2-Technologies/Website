@@ -3,3 +3,25 @@ description: Enterprise Application Development Platform
 theme: jekyll-theme-primer # Optional, but good standard fallback
 markdown: kramdown
 permalink: pretty
+
+defaults:
+  # Default for all files (English / Root)
+  - scope:
+      path: ""
+    values:
+      lang: "en"
+      url_prefix: ""
+
+  # Override for German folder
+  - scope:
+      path: "de"
+    values:
+      lang: "de"
+      url_prefix: "/de"
+
+  # Override for Spanish folder
+  - scope:
+      path: "es"
+    values:
+      lang: "es"
+      url_prefix: "/es"

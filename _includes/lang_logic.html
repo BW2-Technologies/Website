@@ -1,0 +1,10 @@
+{% assign current_lang = 'en' %}
+{% assign url_prefix = '' %}
+
+{% if page.url contains '/de/' %}
+{% assign current_lang = 'de' %}
+{% assign url_prefix = '/de' %}
+{% elsif page.url contains '/es/' %}
+{% assign current_lang = 'es' %}
+{% assign url_prefix = '/es' %}
+{% endif %}

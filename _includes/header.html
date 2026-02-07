@@ -1,69 +1,70 @@
 <nav class="fixed w-full z-50 transition-all duration-300 glass-header border-b border-white/5" x-data="{ mobileMenuOpen: false }">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between items-center h-16">
-            <a href="{{ url_prefix }}/index" class="flex items-center gap-2 cursor-pointer" onclick="window.scrollTo(0,0)">
+            <a href="{{ page.url_prefix }}/index" class="flex items-center gap-2 cursor-pointer" onclick="window.scrollTo(0,0)">
                 <img src="{{ site.baseurl }}/assets/bw2.svg"
                      alt="BW2" class="h-6 md:h-8 w-auto">
             </a>
 
             <div class="hidden lg:flex items-center space-x-6 xl:space-x-8">
-                <a href="{{ url_prefix }}/features" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">
-                    {{ site.data[current_lang].nav.features }}
+
+                <a href="{{ page.url_prefix }}/features" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">
+                    {{ site.data[page.lang].nav.features }}
                 </a>
 
                 <div class="relative group">
                     <button class="text-sm font-medium text-slate-300 hover:text-white transition-colors flex items-center gap-1 py-3">
-                        {{ site.data[current_lang].nav.licensing }}<i class="fas fa-chevron-down text-[10px] opacity-50 ml-1 group-hover:rotate-180 transition-transform duration-200"></i>
+                        {{ site.data[page.lang].nav.licensing }}<i class="fas fa-chevron-down text-[10px] opacity-50 ml-1 group-hover:rotate-180 transition-transform duration-200"></i>
                     </button>
                     <div class="absolute left-0 top-full w-max rounded-xl bg-dark-900 border border-white/10 shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-2 group-hover:translate-y-0 p-2 z-50">
-                        <a href="{{ url_prefix }}/software-licensing" class="block px-4 py-2 text-sm text-slate-300 hover:bg-white/5 hover:text-white rounded-lg transition-colors whitespace-nowrap">
-                            <i class="fas fa-key w-4 text-slate-500 mr-2"></i>{{ site.data[current_lang].nav.software_licensing }}
+                        <a href="{{ page.url_prefix }}/software-licensing" class="block px-4 py-2 text-sm text-slate-300 hover:bg-white/5 hover:text-white rounded-lg transition-colors whitespace-nowrap">
+                            <i class="fas fa-key w-4 text-slate-500 mr-2"></i>{{ site.data[page.lang].nav.software_licensing }}
                         </a>
-                        <a href="{{ url_prefix }}/cloud-and-management-tools" class="block px-4 py-2 text-sm text-slate-300 hover:bg-white/5 hover:text-white rounded-lg transition-colors whitespace-nowrap">
-                            <i class="fas fa-server w-4 text-slate-500 mr-2"></i>{{ site.data[current_lang].nav.cloud_tools }}
+                        <a href="{{ page.url_prefix }}/cloud-and-management-tools" class="block px-4 py-2 text-sm text-slate-300 hover:bg-white/5 hover:text-white rounded-lg transition-colors whitespace-nowrap">
+                            <i class="fas fa-server w-4 text-slate-500 mr-2"></i>{{ site.data[page.lang].nav.cloud_tools }}
                         </a>
                     </div>
                 </div>
 
                 <div class="relative group">
                     <button class="text-sm font-medium text-slate-300 hover:text-white transition-colors flex items-center gap-1 py-3">
-                        {{ site.data[current_lang].nav.information }} <i class="fas fa-chevron-down text-[10px] opacity-50 ml-1 group-hover:rotate-180 transition-transform duration-200"></i>
+                        {{ site.data[page.lang].nav.information }} <i class="fas fa-chevron-down text-[10px] opacity-50 ml-1 group-hover:rotate-180 transition-transform duration-200"></i>
                     </button>
                     <div class="absolute left-0 top-full w-max rounded-xl bg-dark-900 border border-white/10 shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-2 group-hover:translate-y-0 p-2 z-50">
-                        <a href="{{ url_prefix }}/for-software-vendors" class="block px-4 py-2 text-sm text-slate-300 hover:bg-white/5 hover:text-white rounded-lg transition-colors whitespace-nowrap">
-                            <i class="fas fa-laptop-code w-4 text-slate-500 mr-2"></i>{{ site.data[current_lang].nav.vendors }}
+                        <a href="{{ page.url_prefix }}/for-software-vendors" class="block px-4 py-2 text-sm text-slate-300 hover:bg-white/5 hover:text-white rounded-lg transition-colors whitespace-nowrap">
+                            <i class="fas fa-laptop-code w-4 text-slate-500 mr-2"></i>{{ site.data[page.lang].nav.vendors }}
                         </a>
-                        <a href="{{ url_prefix }}/for-custom-software-factories" class="block px-4 py-2 text-sm text-slate-300 hover:bg-white/5 hover:text-white rounded-lg transition-colors whitespace-nowrap">
-                            <i class="fas fa-industry w-4 text-slate-500 mr-2"></i>{{ site.data[current_lang].nav.factories }}
+                        <a href="{{ page.url_prefix }}/for-custom-software-factories" class="block px-4 py-2 text-sm text-slate-300 hover:bg-white/5 hover:text-white rounded-lg transition-colors whitespace-nowrap">
+                            <i class="fas fa-industry w-4 text-slate-500 mr-2"></i>{{ site.data[page.lang].nav.factories }}
                         </a>
-                        <a href="{{ url_prefix }}/for-software-resellers" class="block px-4 py-2 text-sm text-slate-300 hover:bg-white/5 hover:text-white rounded-lg transition-colors whitespace-nowrap">
-                            <i class="fas fa-store w-4 text-slate-500 mr-2"></i>{{ site.data[current_lang].nav.resellers }}
+                        <a href="{{ page.url_prefix }}/for-software-resellers" class="block px-4 py-2 text-sm text-slate-300 hover:bg-white/5 hover:text-white rounded-lg transition-colors whitespace-nowrap">
+                            <i class="fas fa-store w-4 text-slate-500 mr-2"></i>{{ site.data[page.lang].nav.resellers }}
                         </a>
-                        <a href="{{ url_prefix }}/for-industry-experts" class="block px-4 py-2 text-sm text-slate-300 hover:bg-white/5 hover:text-white rounded-lg transition-colors whitespace-nowrap">
-                            <i class="fas fa-lightbulb w-4 text-slate-500 mr-2"></i>{{ site.data[current_lang].nav.experts }}
+                        <a href="{{ page.url_prefix }}/for-industry-experts" class="block px-4 py-2 text-sm text-slate-300 hover:bg-white/5 hover:text-white rounded-lg transition-colors whitespace-nowrap">
+                            <i class="fas fa-lightbulb w-4 text-slate-500 mr-2"></i>{{ site.data[page.lang].nav.experts }}
                         </a>
-                        <a href="{{ url_prefix }}/for-industry-leaders" class="block px-4 py-2 text-sm text-slate-300 hover:bg-white/5 hover:text-white rounded-lg transition-colors whitespace-nowrap">
-                            <i class="fas fa-chess-king w-4 text-slate-500 mr-2"></i>{{ site.data[current_lang].nav.leaders }}
+                        <a href="{{ page.url_prefix }}/for-industry-leaders" class="block px-4 py-2 text-sm text-slate-300 hover:bg-white/5 hover:text-white rounded-lg transition-colors whitespace-nowrap">
+                            <i class="fas fa-chess-king w-4 text-slate-500 mr-2"></i>{{ site.data[page.lang].nav.leaders }}
                         </a>
-                        <a href="{{ url_prefix }}/for-industry-associations" class="block px-4 py-2 text-sm text-slate-300 hover:bg-white/5 hover:text-white rounded-lg transition-colors whitespace-nowrap">
-                            <i class="fas fa-users w-4 text-slate-500 mr-2"></i>{{ site.data[current_lang].nav.associations }}
+                        <a href="{{ page.url_prefix }}/for-industry-associations" class="block px-4 py-2 text-sm text-slate-300 hover:bg-white/5 hover:text-white rounded-lg transition-colors whitespace-nowrap">
+                            <i class="fas fa-users w-4 text-slate-500 mr-2"></i>{{ site.data[page.lang].nav.associations }}
                         </a>
                     </div>
                 </div>
 
                 <div class="relative group">
                     <button class="text-sm font-medium text-slate-300 hover:text-white transition-colors flex items-center gap-1 py-3">
-                        {{ site.data[current_lang].nav.about }}<i class="fas fa-chevron-down text-[10px] opacity-50 ml-1 group-hover:rotate-180 transition-transform duration-200"></i>
+                        {{ site.data[page.lang].nav.about }}<i class="fas fa-chevron-down text-[10px] opacity-50 ml-1 group-hover:rotate-180 transition-transform duration-200"></i>
                     </button>
                     <div class="absolute left-0 top-full w-max rounded-xl bg-dark-900 border border-white/10 shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-2 group-hover:translate-y-0 p-2 z-50">
-                        <a href="{{ url_prefix }}/about-bw2" class="block px-4 py-2 text-sm text-slate-300 hover:bg-white/5 hover:text-white rounded-lg transition-colors whitespace-nowrap">
-                            <i class="fas fa-compass w-4 text-slate-500 mr-2"></i>{{ site.data[current_lang].nav.mission }}
+                        <a href="{{ page.url_prefix }}/about-bw2" class="block px-4 py-2 text-sm text-slate-300 hover:bg-white/5 hover:text-white rounded-lg transition-colors whitespace-nowrap">
+                            <i class="fas fa-compass w-4 text-slate-500 mr-2"></i>{{ site.data[page.lang].nav.mission }}
                         </a>
-                        <a href="{{ url_prefix }}/bw2-difference" class="block px-4 py-2 text-sm text-slate-300 hover:bg-white/5 hover:text-white rounded-lg transition-colors whitespace-nowrap">
-                            <i class="fas fa-star w-4 text-slate-500 mr-2"></i>{{ site.data[current_lang].nav.difference }}
+                        <a href="{{ page.url_prefix }}/bw2-difference" class="block px-4 py-2 text-sm text-slate-300 hover:bg-white/5 hover:text-white rounded-lg transition-colors whitespace-nowrap">
+                            <i class="fas fa-star w-4 text-slate-500 mr-2"></i>{{ site.data[page.lang].nav.difference }}
                         </a>
-                        <a href="{{ url_prefix }}/co-creation-program" class="block px-4 py-2 text-sm text-slate-300 hover:bg-white/5 hover:text-white rounded-lg transition-colors whitespace-nowrap">
-                            <i class="fas fa-handshake w-4 text-slate-500 mr-2"></i>{{ site.data[current_lang].nav.co_creation }}
+                        <a href="{{ page.url_prefix }}/co-creation-program" class="block px-4 py-2 text-sm text-slate-300 hover:bg-white/5 hover:text-white rounded-lg transition-colors whitespace-nowrap">
+                            <i class="fas fa-handshake w-4 text-slate-500 mr-2"></i>{{ site.data[page.lang].nav.co_creation }}
                         </a>
                     </div>
                 </div>
@@ -74,31 +75,33 @@
                 <div class="relative group hidden md:block">
                     <button class="flex items-center gap-2 text-xs font-bold text-slate-400 hover:text-white uppercase transition-colors py-2 px-3 rounded-lg border border-white/10 hover:border-white/30 hover:bg-white/5">
                         <i class="fas fa-globe"></i>
-                        {% if current_lang == 'de' %}DE{% elsif current_lang == 'es' %}ES{% else %}EN{% endif %}
+                        {{ page.lang | upcase }}
                         <i class="fas fa-chevron-down text-[9px] ml-1"></i>
                     </button>
 
                     <div class="absolute right-0 top-full mt-2 w-32 bg-dark-900 border border-white/10 shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 p-2 rounded-xl z-50 transform translate-y-2 group-hover:translate-y-0">
-                        {% assign raw_url = page.url %}
-                        {% if current_lang == 'de' %}
-                        <a href="{{ raw_url | replace_first: '/de', '' | relative_url }}" class="block px-3 py-2 text-sm text-slate-300 hover:text-white hover:bg-white/5 rounded-lg transition-colors">English</a>
-                        <a href="{{ raw_url }}" class="block px-3 py-2 text-sm text-brand-500 font-bold bg-white/5 rounded-lg transition-colors">Deutsch</a>
-                        <a href="{{ raw_url | replace_first: '/de', '/es' | relative_url }}" class="block px-3 py-2 text-sm text-slate-300 hover:text-white hover:bg-white/5 rounded-lg transition-colors">Español</a>
-                        {% elsif current_lang == 'es' %}
-                        <a href="{{ raw_url | replace_first: '/es', '' | relative_url }}" class="block px-3 py-2 text-sm text-slate-300 hover:text-white hover:bg-white/5 rounded-lg transition-colors">English</a>
-                        <a href="{{ raw_url | replace_first: '/es', '/de' | relative_url }}" class="block px-3 py-2 text-sm text-slate-300 hover:text-white hover:bg-white/5 rounded-lg transition-colors">Deutsch</a>
-                        <a href="{{ raw_url }}" class="block px-3 py-2 text-sm text-brand-500 font-bold bg-white/5 rounded-lg transition-colors">Español</a>
-                        {% else %}
-                        <a href="{{ raw_url }}" class="block px-3 py-2 text-sm text-brand-500 font-bold bg-white/5 rounded-lg transition-colors">English</a>
-                        <a href="/de{{ raw_url }}" class="block px-3 py-2 text-sm text-slate-300 hover:text-white hover:bg-white/5 rounded-lg transition-colors">Deutsch</a>
-                        <a href="/es{{ raw_url }}" class="block px-3 py-2 text-sm text-slate-300 hover:text-white hover:bg-white/5 rounded-lg transition-colors">Español</a>
-                        {% endif %}
+                        {% assign clean_url = page.url | replace: '/de/', '/' | replace: '/es/', '/' %}
+
+                        <a href="{{ clean_url | relative_url }}"
+                           class="block px-3 py-2 text-sm {% if page.lang == 'en' %}text-brand-500 font-bold bg-white/5{% else %}text-slate-300 hover:text-white hover:bg-white/5{% endif %} rounded-lg transition-colors">
+                            English
+                        </a>
+
+                        <a href="/de{{ clean_url }}"
+                           class="block px-3 py-2 text-sm {% if page.lang == 'de' %}text-brand-500 font-bold bg-white/5{% else %}text-slate-300 hover:text-white hover:bg-white/5{% endif %} rounded-lg transition-colors">
+                            Deutsch
+                        </a>
+
+                        <a href="/es{{ clean_url }}"
+                           class="block px-3 py-2 text-sm {% if page.lang == 'es' %}text-brand-500 font-bold bg-white/5{% else %}text-slate-300 hover:text-white hover:bg-white/5{% endif %} rounded-lg transition-colors">
+                            Español
+                        </a>
                     </div>
                 </div>
 
-                <a href="{{ url_prefix }}/contact"
+                <a href="{{ page.url_prefix }}/contact"
                    class="hidden md:block bg-white text-dark-900 hover:bg-brand-50 px-4 py-2 rounded-full text-xs font-bold transition-all shadow-lg shadow-brand-500/20">
-                    {{ site.data[current_lang].nav.contact }}
+                    {{ site.data[page.lang].nav.contact }}
                 </a>
 
                 <button class="lg:hidden text-white p-2 focus:outline-none"
@@ -110,49 +113,80 @@
     </div>
 
     <div id="mobile-menu" class="hidden lg:hidden glass-header border-t border-white/10 p-4 space-y-4 max-h-[85vh] overflow-y-auto shadow-2xl">
-        <a href="{{ url_prefix }}/features" class="block text-sm font-medium hover:text-white text-slate-300">{{ site.data[current_lang].nav.features }}</a>
+        <a href="{{ page.url_prefix }}/features" class="block text-sm font-medium hover:text-white text-slate-300">
+            {{ site.data[page.lang].nav.features }}
+        </a>
 
         <div class="py-2 border-t border-white/5 border-b">
-            <p class="text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">{{ site.data[current_lang].nav.licensing }}</p>
-            <a href="{{ url_prefix }}/software-licensing" class="block pl-4 py-2 text-sm text-slate-300 hover:text-white">{{ site.data[current_lang].nav.software_licensing }}</a>
-            <a href="{{ url_prefix }}/cloud-and-management-tools" class="block pl-4 py-2 text-sm text-slate-300 hover:text-white">{{ site.data[current_lang].nav.cloud_tools }}</a>
+            <p class="text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">{{ site.data[page.lang].nav.licensing }}</p>
+            <a href="{{ page.url_prefix }}/software-licensing" class="block pl-4 py-2 text-sm text-slate-300 hover:text-white">
+                {{ site.data[page.lang].nav.software_licensing }}
+            </a>
+            <a href="{{ page.url_prefix }}/cloud-and-management-tools" class="block pl-4 py-2 text-sm text-slate-300 hover:text-white">
+                {{ site.data[page.lang].nav.cloud_tools }}
+            </a>
         </div>
 
         <div class="py-2 border-b border-white/5">
-            <p class="text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">{{ site.data[current_lang].nav.information }}</p>
-            <a href="{{ url_prefix }}/for-software-vendors" class="block pl-4 py-2 text-sm text-slate-300 hover:text-white">{{ site.data[current_lang].nav.vendors }}</a>
-            <a href="{{ url_prefix }}/for-custom-software-factories" class="block pl-4 py-2 text-sm text-slate-300 hover:text-white">{{ site.data[current_lang].nav.factories }}</a>
-            <a href="{{ url_prefix }}/for-software-resellers" class="block pl-4 py-2 text-sm text-slate-300 hover:text-white">{{ site.data[current_lang].nav.resellers }}</a>
-            <a href="{{ url_prefix }}/for-industry-experts" class="block pl-4 py-2 text-sm text-slate-300 hover:text-white">{{ site.data[current_lang].nav.experts }}</a>
-            <a href="{{ url_prefix }}/for-industry-leaders" class="block pl-4 py-2 text-sm text-slate-300 hover:text-white">{{ site.data[current_lang].nav.leaders }}</a>
-            <a href="{{ url_prefix }}/for-industry-associations" class="block pl-4 py-2 text-sm text-slate-300 hover:text-white">{{ site.data[current_lang].nav.associations }}</a>
+            <p class="text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">{{ site.data[page.lang].nav.information }}</p>
+            <a href="{{ page.url_prefix }}/for-software-vendors" class="block pl-4 py-2 text-sm text-slate-300 hover:text-white">
+                {{ site.data[page.lang].nav.vendors }}
+            </a>
+            <a href="{{ page.url_prefix }}/for-custom-software-factories" class="block pl-4 py-2 text-sm text-slate-300 hover:text-white">
+                {{ site.data[page.lang].nav.factories }}
+            </a>
+            <a href="{{ page.url_prefix }}/for-software-resellers" class="block pl-4 py-2 text-sm text-slate-300 hover:text-white">
+                {{ site.data[page.lang].nav.resellers }}
+            </a>
+            <a href="{{ page.url_prefix }}/for-industry-experts" class="block pl-4 py-2 text-sm text-slate-300 hover:text-white">
+                {{ site.data[page.lang].nav.experts }}
+            </a>
+            <a href="{{ page.url_prefix }}/for-industry-leaders" class="block pl-4 py-2 text-sm text-slate-300 hover:text-white">
+                {{ site.data[page.lang].nav.leaders }}
+            </a>
+            <a href="{{ page.url_prefix }}/for-industry-associations" class="block pl-4 py-2 text-sm text-slate-300 hover:text-white">
+                {{ site.data[page.lang].nav.associations }}
+            </a>
         </div>
 
         <div class="py-2 border-t border-white/5 border-b">
-            <p class="text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">{{ site.data[current_lang].nav.about }}</p>
-            <a href="{{ url_prefix }}/about-bw2" class="block pl-4 py-2 text-sm text-slate-300 hover:text-white">{{ site.data[current_lang].nav.mission }}</a>
-            <a href="{{ url_prefix }}/bw2-difference" class="block pl-4 py-2 text-sm text-slate-300 hover:text-white">{{ site.data[current_lang].nav.difference }}</a>
-            <a href="{{ url_prefix }}/co-creation-program" class="block pl-4 py-2 text-sm text-slate-300 hover:text-white">{{ site.data[current_lang].nav.co_creation }}</a>
+            <p class="text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">{{ site.data[page.lang].nav.about }}</p>
+            <a href="{{ page.url_prefix }}/about-bw2" class="block pl-4 py-2 text-sm text-slate-300 hover:text-white">
+                {{ site.data[page.lang].nav.mission }}
+            </a>
+            <a href="{{ page.url_prefix }}/bw2-difference" class="block pl-4 py-2 text-sm text-slate-300 hover:text-white">
+                {{ site.data[page.lang].nav.difference }}
+            </a>
+            <a href="{{ page.url_prefix }}/co-creation-program" class="block pl-4 py-2 text-sm text-slate-300 hover:text-white">
+                {{ site.data[page.lang].nav.co_creation }}
+            </a>
         </div>
 
         <div class="flex justify-center gap-4 py-2">
-            {% assign raw_url = page.url %}
-            {% if current_lang == 'de' %}
-            <a href="{{ raw_url | replace_first: '/de', '' | relative_url }}" class="text-xs text-slate-400 hover:text-white">EN</a>
+            {% assign clean_url = page.url | replace: '/de/', '/' | replace: '/es/', '/' %}
+
+            {% if page.lang == 'en' %}
+            <span class="text-xs text-brand-500 font-bold">EN</span>
+            {% else %}
+            <a href="{{ clean_url | relative_url }}" class="text-xs text-slate-400 hover:text-white">EN</a>
+            {% endif %}
+
+            {% if page.lang == 'de' %}
             <span class="text-xs text-brand-500 font-bold">DE</span>
-            <a href="{{ raw_url | replace_first: '/de', '/es' | relative_url }}" class="text-xs text-slate-400 hover:text-white">ES</a>
-            {% elsif current_lang == 'es' %}
-            <a href="{{ raw_url | replace_first: '/es', '' | relative_url }}" class="text-xs text-slate-400 hover:text-white">EN</a>
-            <a href="{{ raw_url | replace_first: '/es', '/de' | relative_url }}" class="text-xs text-slate-400 hover:text-white">DE</a>
+            {% else %}
+            <a href="/de{{ clean_url }}" class="text-xs text-slate-400 hover:text-white">DE</a>
+            {% endif %}
+
+            {% if page.lang == 'es' %}
             <span class="text-xs text-brand-500 font-bold">ES</span>
             {% else %}
-            <span class="text-xs text-brand-500 font-bold">EN</span>
-            <a href="/de{{ raw_url }}" class="text-xs text-slate-400 hover:text-white">DE</a>
-            <a href="/es{{ raw_url }}" class="text-xs text-slate-400 hover:text-white">ES</a>
+            <a href="/es{{ clean_url }}" class="text-xs text-slate-400 hover:text-white">ES</a>
             {% endif %}
         </div>
 
-        <a href="{{ url_prefix }}/contact" class="block text-center bg-white text-dark-900 py-3 rounded-lg font-bold mt-4">{{ site.data[current_lang].nav.contact }}</a>
+        <a href="{{ page.url_prefix }}/contact" class="block text-center bg-white text-dark-900 py-3 rounded-lg font-bold mt-4">
+            {{ site.data[page.lang].nav.contact }}
+        </a>
     </div>
 
     <script>

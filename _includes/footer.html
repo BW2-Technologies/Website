@@ -3,50 +3,58 @@
         <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-y-12 gap-x-2 mb-16">
 
             <div>
-                <h4 class="text-white font-bold text-sm uppercase tracking-widest mb-6 border-b border-bwgreen-400/30 pb-2 w-max">{{ site.data[current_lang].footer.features_title }}</h4>
+                <h4 class="text-white font-bold text-sm uppercase tracking-widest mb-6 border-b border-bwgreen-400/30 pb-2 w-max">
+                    {{ site.data[page.lang].footer.features_title }}
+                </h4>
                 <ul class="space-y-4 text-sm text-slate-400">
-                    <li><a href="{{ url_prefix }}/features#business" class="footer-link-hover hover:text-white transition-colors">{{ site.data[current_lang].footer.business_features }}</a></li>
-                    <li><a href="{{ url_prefix }}/features#developer" class="footer-link-hover hover:text-white transition-colors">{{ site.data[current_lang].footer.dev_platform }}</a></li>
-                    <li><a href="{{ url_prefix }}/features#ai" class="footer-link-hover hover:text-white transition-colors">{{ site.data[current_lang].footer.ai_cloud }}</a></li>
-                    <li><a href="{{ url_prefix }}/features#app-store" class="footer-link-hover hover:text-white transition-colors">{{ site.data[current_lang].footer.app_store }}</a></li>
-                    <li><a href="{{ url_prefix }}/features#ui" class="footer-link-hover hover:text-white transition-colors">{{ site.data[current_lang].footer.ui }}</a></li>
+                    <li><a href="{{ page.url_prefix }}/features#business" class="footer-link-hover hover:text-white transition-colors">{{ site.data[page.lang].footer.business_features }}</a></li>
+                    <li><a href="{{ page.url_prefix }}/features#developer" class="footer-link-hover hover:text-white transition-colors">{{ site.data[page.lang].footer.dev_platform }}</a></li>
+                    <li><a href="{{ page.url_prefix }}/features#ai" class="footer-link-hover hover:text-white transition-colors">{{ site.data[page.lang].footer.ai_cloud }}</a></li>
+                    <li><a href="{{ page.url_prefix }}/features#app-store" class="footer-link-hover hover:text-white transition-colors">{{ site.data[page.lang].footer.app_store }}</a></li>
+                    <li><a href="{{ page.url_prefix }}/features#ui" class="footer-link-hover hover:text-white transition-colors">{{ site.data[page.lang].footer.ui }}</a></li>
                 </ul>
             </div>
 
             <div>
-                <h4 class="text-white font-bold text-sm uppercase tracking-widest mb-6 border-b border-bwgreen-400/30 pb-2 w-max">{{ site.data[current_lang].footer.licensing_title }}</h4>
+                <h4 class="text-white font-bold text-sm uppercase tracking-widest mb-6 border-b border-bwgreen-400/30 pb-2 w-max">
+                    {{ site.data[page.lang].footer.licensing_title }}
+                </h4>
                 <ul class="space-y-4 text-sm text-slate-400">
-                    <li><a href="{{ url_prefix }}/software-licensing" class="footer-link-hover hover:text-white transition-colors">{{ site.data[current_lang].nav.software_licensing }}</a></li>
-                    <li><a href="{{ url_prefix }}/cloud-and-management-tools" class="footer-link-hover hover:text-white transition-colors">{{ site.data[current_lang].nav.cloud_tools }}</a></li>
+                    <li><a href="{{ page.url_prefix }}/software-licensing" class="footer-link-hover hover:text-white transition-colors">{{ site.data[page.lang].nav.software_licensing }}</a></li>
+                    <li><a href="{{ page.url_prefix }}/cloud-and-management-tools" class="footer-link-hover hover:text-white transition-colors">{{ site.data[page.lang].nav.cloud_tools }}</a></li>
                 </ul>
             </div>
 
             <div>
-                <h4 class="text-white font-bold text-sm uppercase tracking-widest mb-6 border-b border-bwgreen-400/30 pb-2 w-max">{{ site.data[current_lang].footer.info_title }}</h4>
+                <h4 class="text-white font-bold text-sm uppercase tracking-widest mb-6 border-b border-bwgreen-400/30 pb-2 w-max">
+                    {{ site.data[page.lang].footer.info_title }}
+                </h4>
                 <ul class="space-y-4 text-sm text-slate-400">
-                    <li><a href="{{ url_prefix }}/for-software-vendors" class="footer-link-hover hover:text-white transition-colors">{{ site.data[current_lang].nav.vendors }}</a></li>
-                    <li><a href="{{ url_prefix }}/for-custom-software-factories" class="footer-link-hover hover:text-white transition-colors">{{ site.data[current_lang].nav.factories }}</a></li>
-                    <li><a href="{{ url_prefix }}/for-software-resellers" class="footer-link-hover hover:text-white transition-colors">{{ site.data[current_lang].nav.resellers }}</a></li>
-                    <li><a href="{{ url_prefix }}/for-industry-experts" class="footer-link-hover hover:text-white transition-colors">{{ site.data[current_lang].nav.experts }}</a></li>
-                    <li><a href="{{ url_prefix }}/for-industry-leaders" class="footer-link-hover hover:text-white transition-colors">{{ site.data[current_lang].nav.leaders }}</a></li>
-                    <li><a href="{{ url_prefix }}/for-industry-associations" class="footer-link-hover hover:text-white transition-colors">{{ site.data[current_lang].nav.associations }}</a></li>
+                    <li><a href="{{ page.url_prefix }}/for-software-vendors" class="footer-link-hover hover:text-white transition-colors">{{ site.data[page.lang].nav.vendors }}</a></li>
+                    <li><a href="{{ page.url_prefix }}/for-custom-software-factories" class="footer-link-hover hover:text-white transition-colors">{{ site.data[page.lang].nav.factories }}</a></li>
+                    <li><a href="{{ page.url_prefix }}/for-software-resellers" class="footer-link-hover hover:text-white transition-colors">{{ site.data[page.lang].nav.resellers }}</a></li>
+                    <li><a href="{{ page.url_prefix }}/for-industry-experts" class="footer-link-hover hover:text-white transition-colors">{{ site.data[page.lang].nav.experts }}</a></li>
+                    <li><a href="{{ page.url_prefix }}/for-industry-leaders" class="footer-link-hover hover:text-white transition-colors">{{ site.data[page.lang].nav.leaders }}</a></li>
+                    <li><a href="{{ page.url_prefix }}/for-industry-associations" class="footer-link-hover hover:text-white transition-colors">{{ site.data[page.lang].nav.associations }}</a></li>
                 </ul>
             </div>
 
             <div class="col-span-2 md:col-span-1 lg:col-span-1">
-                <h4 class="text-white font-bold text-sm uppercase tracking-widest mb-6 border-b border-bwgreen-400/30 pb-2 w-max">{{ site.data[current_lang].footer.about_title }}</h4>
+                <h4 class="text-white font-bold text-sm uppercase tracking-widest mb-6 border-b border-bwgreen-400/30 pb-2 w-max">
+                    {{ site.data[page.lang].footer.about_title }}
+                </h4>
                 <ul class="space-y-4 text-sm text-slate-400">
-                    <li><a href="{{ url_prefix }}/about-bw2" class="footer-link-hover hover:text-white transition-colors">{{ site.data[current_lang].nav.mission }}</a></li>
-                    <li><a href="{{ url_prefix }}/bw2-difference" class="footer-link-hover hover:text-white transition-colors">{{ site.data[current_lang].nav.difference }}</a></li>
-                    <li><a href="{{ url_prefix }}/co-creation-program" class="footer-link-hover hover:text-white transition-colors">{{ site.data[current_lang].nav.co_creation }}</a></li>
-                    <li><a href="{{ url_prefix }}/contact" class="footer-link-hover hover:text-white transition-colors">{{ site.data[current_lang].nav.contact }}</a></li>
+                    <li><a href="{{ page.url_prefix }}/about-bw2" class="footer-link-hover hover:text-white transition-colors">{{ site.data[page.lang].nav.mission }}</a></li>
+                    <li><a href="{{ page.url_prefix }}/bw2-difference" class="footer-link-hover hover:text-white transition-colors">{{ site.data[page.lang].nav.difference }}</a></li>
+                    <li><a href="{{ page.url_prefix }}/co-creation-program" class="footer-link-hover hover:text-white transition-colors">{{ site.data[page.lang].nav.co_creation }}</a></li>
+                    <li><a href="{{ page.url_prefix }}/contact" class="footer-link-hover hover:text-white transition-colors">{{ site.data[page.lang].nav.contact }}</a></li>
                 </ul>
             </div>
         </div>
 
         <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-6">
             <div class="flex items-center gap-3">
-                <p class="text-slate-500 text-sm">{{ site.data[current_lang].footer.rights }}</p>
+                <p class="text-slate-500 text-sm">{{ site.data[page.lang].footer.rights }}</p>
             </div>
         </div>
     </div>
