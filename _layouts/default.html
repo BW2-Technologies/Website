@@ -1,5 +1,21 @@
+---
+layout: null
+---
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+{% comment %} --- LANGUAGE LOGIC START --- {% endcomment %}
+{% assign current_lang = 'en' %}
+{% assign url_prefix = '' %}
+
+{% if page.url contains '/de/' %}
+{% assign current_lang = 'de' %}
+{% assign url_prefix = '/de' %}
+{% elsif page.url contains '/es/' %}
+{% assign current_lang = 'es' %}
+{% assign url_prefix = '/es' %}
+{% endif %}
+{% comment %} --- LANGUAGE LOGIC END --- {% endcomment %}
+
+<html lang="{{ current_lang }}" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -39,47 +55,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/style.css">
 
-     
- <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/style.css">
-
-    <!--
-    <script src="https://cdn.tailwindcss.com"></script>
-
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                    },
-                    colors: {
-                        brand: {
-                            50: '#f0f9ff',
-                            100: '#e0f2fe',
-                            500: '#0ea5e9',
-                            600: '#0284c7',
-                            900: '#0c4a6e',
-                        },
-                        dark: {
-                            900: '#0f172a',
-                            800: '#1e293b',
-                            700: '#334155',
-                        },
-                        bwgreen: {
-                            400: '#34d399',
-                            500: '#10b981',
-                        }
-                    },
-                    backgroundImage: {
-                        'hero-glow': 'conic-gradient(from 90deg at 50% 50%, #0f172a 0%, #1e293b 50%, #0f172a 100%)',
-                    }
-                }
-            }
-        }
-    </script>
-    -->
-   
     <style>
         /* Shared Custom Utilities */
         .glass-panel {
