@@ -1,8 +1,18 @@
 ---
 layout: default
-title: Kontakt - Lassen Sie uns sprechen | BW2
+title: Kontaktieren Sie uns - Lassen Sie uns sprechen | BW2
 ---
 
+<style>
+    /* Page Specific Styles */
+    .hover-card-rise:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.3);
+    }
+    #contact-form-section {
+        transition: all 0.5s ease-in-out;
+    }
+</style>
 
 <!-- Hero Section -->
 <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
@@ -12,8 +22,7 @@ title: Kontakt - Lassen Sie uns sprechen | BW2
     </div>
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-        <div
-                class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-300 text-xs font-semibold uppercase tracking-wider mb-8">
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-300 text-xs font-semibold uppercase tracking-wider mb-8">
             <span class="w-2 h-2 rounded-full bg-indigo-500"></span> In Kontakt treten
         </div>
 
@@ -29,30 +38,28 @@ title: Kontakt - Lassen Sie uns sprechen | BW2
 </section>
 
 <!-- Contact Grid -->
-<section class="py-12 pb-32 bg-dark-900 relative">
+<section class="py-12 bg-dark-900 relative">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
 
             <!-- Sales -->
-            <a href="mailto:sales@bw2.com"
-               class="glass-panel p-8 rounded-2xl hover-card-rise group border-t-4 border-t-brand-500 flex flex-col transition-all cursor-pointer">
-                <div
-                        class="w-14 h-14 bg-brand-500/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-brand-500/20 transition-colors">
+            <button onclick="openForm('Vertrieb')"
+                    class="w-full text-left glass-panel p-8 rounded-2xl hover-card-rise group border-t-4 border-t-brand-500 flex flex-col transition-all cursor-pointer">
+                <div class="w-14 h-14 bg-brand-500/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-brand-500/20 transition-colors">
                     <i class="fas fa-hand-holding-dollar text-2xl text-brand-400"></i>
                 </div>
                 <h3 class="text-xl font-bold text-white mb-3">Vertrieb</h3>
                 <p class="text-slate-400 text-sm leading-relaxed mb-6">
-                    Fordern Sie eine Demo an, erhalten Sie individuelle Preise und stellen Sie Fragen zu unserer Plattform.
+                    Fordern Sie eine Demo an, erhalten Sie individuelle Preise und stellen Sie Fragen zu unserem Co-Creation-Programm.
                 </p>
                 <span class="mt-auto text-brand-400 text-sm font-semibold flex items-center">Vertrieb kontaktieren <i
                         class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i></span>
-            </a>
+            </button>
 
             <!-- Help & Support -->
-            <a href="mailto:support@bw2.com"
-               class="glass-panel p-8 rounded-2xl hover-card-rise group border-t-4 border-t-purple-500 flex flex-col transition-all cursor-pointer">
-                <div
-                        class="w-14 h-14 bg-purple-500/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-purple-500/20 transition-colors">
+            <button onclick="openForm('Hilfe & Support')"
+                    class="w-full text-left glass-panel p-8 rounded-2xl hover-card-rise group border-t-4 border-t-purple-500 flex flex-col transition-all cursor-pointer">
+                <div class="w-14 h-14 bg-purple-500/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-purple-500/20 transition-colors">
                     <i class="fas fa-life-ring text-2xl text-purple-400"></i>
                 </div>
                 <h3 class="text-xl font-bold text-white mb-3">Hilfe & Support</h3>
@@ -61,13 +68,12 @@ title: Kontakt - Lassen Sie uns sprechen | BW2
                 </p>
                 <span class="mt-auto text-purple-400 text-sm font-semibold flex items-center">Support erhalten <i
                         class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i></span>
-            </a>
+            </button>
 
             <!-- Training -->
-            <a href="mailto:training@bw2.com"
-               class="glass-panel p-8 rounded-2xl hover-card-rise group border-t-4 border-t-emerald-500 flex flex-col transition-all cursor-pointer">
-                <div
-                        class="w-14 h-14 bg-emerald-500/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-emerald-500/20 transition-colors">
+            <button onclick="openForm('Schulung')"
+                    class="w-full text-left glass-panel p-8 rounded-2xl hover-card-rise group border-t-4 border-t-emerald-500 flex flex-col transition-all cursor-pointer">
+                <div class="w-14 h-14 bg-emerald-500/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-emerald-500/20 transition-colors">
                     <i class="fas fa-graduation-cap text-2xl text-emerald-400"></i>
                 </div>
                 <h3 class="text-xl font-bold text-white mb-3">Schulung</h3>
@@ -76,13 +82,12 @@ title: Kontakt - Lassen Sie uns sprechen | BW2
                 </p>
                 <span class="mt-auto text-emerald-400 text-sm font-semibold flex items-center">Schulung anfragen <i
                         class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i></span>
-            </a>
+            </button>
 
             <!-- Careers -->
-            <a href="mailto:careers@bw2.com"
-               class="glass-panel p-8 rounded-2xl hover-card-rise group border-t-4 border-t-orange-500 flex flex-col transition-all cursor-pointer">
-                <div
-                        class="w-14 h-14 bg-orange-500/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-orange-500/20 transition-colors">
+            <button onclick="openForm('Karriere')"
+                    class="w-full text-left glass-panel p-8 rounded-2xl hover-card-rise group border-t-4 border-t-orange-500 flex flex-col transition-all cursor-pointer">
+                <div class="w-14 h-14 bg-orange-500/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-orange-500/20 transition-colors">
                     <i class="fas fa-user-tie text-2xl text-orange-400"></i>
                 </div>
                 <h3 class="text-xl font-bold text-white mb-3">Karriere</h3>
@@ -91,13 +96,12 @@ title: Kontakt - Lassen Sie uns sprechen | BW2
                 </p>
                 <span class="mt-auto text-orange-400 text-sm font-semibold flex items-center">Bei uns arbeiten <i
                         class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i></span>
-            </a>
+            </button>
 
             <!-- Partner / Invest -->
-            <a href="mailto:partners@bw2.com"
-               class="glass-panel p-8 rounded-2xl hover-card-rise group border-t-4 border-t-indigo-500 flex flex-col transition-all cursor-pointer">
-                <div
-                        class="w-14 h-14 bg-indigo-500/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-indigo-500/20 transition-colors">
+            <button onclick="openForm('Partnerschaft / Investition')"
+                    class="w-full text-left glass-panel p-8 rounded-2xl hover-card-rise group border-t-4 border-t-indigo-500 flex flex-col transition-all cursor-pointer">
+                <div class="w-14 h-14 bg-indigo-500/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-indigo-500/20 transition-colors">
                     <i class="fas fa-handshake text-2xl text-indigo-400"></i>
                 </div>
                 <h3 class="text-xl font-bold text-white mb-3">Partnerschaft / Investition</h3>
@@ -106,13 +110,12 @@ title: Kontakt - Lassen Sie uns sprechen | BW2
                 </p>
                 <span class="mt-auto text-indigo-400 text-sm font-semibold flex items-center">Partner werden <i
                         class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i></span>
-            </a>
+            </button>
 
             <!-- General -->
-            <a href="mailto:info@bw2.com"
-               class="glass-panel p-8 rounded-2xl hover-card-rise group border-t-4 border-t-slate-500 flex flex-col transition-all cursor-pointer">
-                <div
-                        class="w-14 h-14 bg-slate-500/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-slate-500/20 transition-colors">
+            <button onclick="openForm('Allgemein')"
+                    class="w-full text-left glass-panel p-8 rounded-2xl hover-card-rise group border-t-4 border-t-slate-500 flex flex-col transition-all cursor-pointer">
+                <div class="w-14 h-14 bg-slate-500/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-slate-500/20 transition-colors">
                     <i class="fas fa-envelope text-2xl text-slate-400"></i>
                 </div>
                 <h3 class="text-xl font-bold text-white mb-3">Allgemein</h3>
@@ -121,9 +124,220 @@ title: Kontakt - Lassen Sie uns sprechen | BW2
                 </p>
                 <span class="mt-auto text-slate-400 text-sm font-semibold flex items-center">E-Mail senden <i
                         class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i></span>
-            </a>
+            </button>
 
         </div>
     </div>
 </section>
 
+<!-- Contact Form Section (Hidden by Default) -->
+<section id="contact-form-section" class="pb-32 bg-dark-900 hidden">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="glass-panel p-8 md:p-12 rounded-2xl border-t border-white/10 shadow-2xl">
+            <div class="text-center mb-10">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-brand-400 text-xs font-bold uppercase tracking-wider mb-4">
+                    Nachricht senden
+                </div>
+                <h2 class="text-2xl md:text-3xl font-bold text-white">Wie können wir Ihnen helfen?</h2>
+            </div>
+
+            <form id="contact-form" class="space-y-6" onsubmit="submitContactForm(event)">
+
+                <!-- Honeypot Field (Hidden from humans) -->
+                <div class="opacity-0 absolute -z-10 w-0 h-0 overflow-hidden" aria-hidden="true">
+                    <label for="your_position">Füllen Sie dies nicht aus, wenn Sie ein Mensch sind:</label>
+                    <input type="text" id="your_position" name="your_position" tabindex="-1" autocomplete="off">
+                </div>
+
+                <!-- Security Fields -->
+                <input type="hidden" id="email2" name="email2">
+
+                <!-- Topic (Read Only) -->
+                <div>
+                    <label for="form-topic" class="block text-sm font-medium text-slate-400 mb-2">Anfrageart</label>
+                    <input type="text" id="form-topic" readonly
+                           class="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-brand-400 font-semibold cursor-not-allowed focus:outline-none">
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Name -->
+                    <div>
+                        <label for="form-name" class="block text-sm font-medium text-slate-400 mb-2">Ihr Name</label>
+                        <input type="text" id="form-name" placeholder="Max Mustermann" required oninput="checkFormValidity()"
+                               class="w-full bg-dark-800 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-slate-600 focus:border-brand-500 focus:ring-1 focus:ring-brand-500 outline-none transition-all">
+                    </div>
+
+                    <!-- Email -->
+                    <div>
+                        <label for="form-email" class="block text-sm font-medium text-slate-400 mb-2">E-Mail-Adresse</label>
+                        <input type="email" id="form-email" placeholder="max@unternehmen.com" required oninput="handleEmailInput()"
+                               class="w-full bg-dark-800 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-slate-600 focus:border-brand-500 focus:ring-1 focus:ring-brand-500 outline-none transition-all">
+                    </div>
+                </div>
+
+                <!-- Message -->
+                <div>
+                    <label for="form-message" class="block text-sm font-medium text-slate-400 mb-2">Ihre Nachricht</label>
+                    <textarea id="form-message" rows="6" placeholder="Erzählen Sie uns mehr über Ihr Projekt oder Ihre Frage..." required oninput="checkFormValidity()"
+                              class="w-full bg-dark-800 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-slate-600 focus:border-brand-500 focus:ring-1 focus:ring-brand-500 outline-none transition-all resize-none"></textarea>
+                </div>
+
+                <!-- Submit -->
+                <div class="pt-4">
+                    <button type="submit" id="submit-btn" disabled
+                            class="w-full bg-brand-600 text-white font-bold py-4 rounded-xl shadow-lg shadow-brand-500/20 transition-all duration-200 opacity-50 cursor-not-allowed">
+                        Nachricht senden
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+<script>
+    // Initialize form open time
+    let formOpenTime = 0;
+
+    function handleEmailInput() {
+        const emailInput = document.getElementById('form-email');
+        const email2Input = document.getElementById('email2');
+
+        // Reverse email value and set into hidden email2 field
+        email2Input.value = emailInput.value.split('').reverse().join('');
+
+        // Check regular validity
+        checkFormValidity();
+    }
+
+    function checkFormValidity() {
+        const name = document.getElementById('form-name').value.trim();
+        const email = document.getElementById('form-email').value.trim();
+        const message = document.getElementById('form-message').value.trim();
+        const btn = document.getElementById('submit-btn');
+
+        if (name && email && message) {
+            btn.disabled = false;
+            btn.classList.remove('opacity-50', 'cursor-not-allowed');
+            // Restore hover effects
+            btn.classList.add('hover:bg-brand-500', 'hover:shadow-brand-500/40', 'hover:-translate-y-1');
+        } else {
+            btn.disabled = true;
+            btn.classList.add('opacity-50', 'cursor-not-allowed');
+            // Remove hover effects
+            btn.classList.remove('hover:bg-brand-500', 'hover:shadow-brand-500/40', 'hover:-translate-y-1');
+        }
+    }
+
+    function openForm(topic) {
+        const formSection = document.getElementById('contact-form-section');
+        const topicInput = document.getElementById('form-topic');
+
+        // Start the timer when form is opened
+        formOpenTime = Date.now();
+
+        // Populate the topic
+        topicInput.value = topic;
+
+        // Show the form
+        formSection.classList.remove('hidden');
+
+        // Validate immediately to set initial state
+        checkFormValidity();
+
+        // Scroll to the form
+        formSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+        // Focus the Name field after scrolling
+        setTimeout(() => {
+            document.getElementById('form-name').focus();
+        }, 800);
+    }
+
+    function submitContactForm(e) {
+        e.preventDefault();
+
+        const btn = document.getElementById('submit-btn');
+        const originalText = btn.innerText;
+
+        // --- SECURITY CHECKS ---
+
+        // 1. Honeypot Check: If the hidden field has a value, it's a bot.
+        const honeypot = document.getElementById('your_position').value;
+        if (honeypot) {
+            console.log("Spam detected: Honeypot field filled.");
+            // Pretend to submit but do nothing
+            return;
+        }
+
+        // 2. Time Guard Check: If submitted in under 2 seconds, it's likely a bot.
+        if (Date.now() - formOpenTime < 5000) {
+            console.log("Spam detected: Submitted too quickly.");
+            // Pretend to submit but do nothing
+            return;
+        }
+
+        // --- END SECURITY CHECKS ---
+
+        // Set loading state
+        btn.innerText = 'Wird gesendet...';
+        btn.disabled = true;
+        btn.classList.add('opacity-75', 'cursor-not-allowed');
+
+        const formData = {
+            topic: document.getElementById('form-topic').value,
+            name: document.getElementById('form-name').value,
+            email: document.getElementById('form-email').value,
+            message: document.getElementById('form-message').value,
+            email2: document.getElementById('email2').value
+        };
+
+        // Construct URL with JSON string as 'json' query parameter
+        const jsonParam = encodeURIComponent(JSON.stringify(formData));
+        const url = `https://tickets.businesswideweb.net/formsubmit?json=${jsonParam}`;
+
+        fetch(url, {
+            method: 'POST'
+        })
+            .then(response => {
+                if (response.ok) {
+                    // Success State
+                    btn.innerText = 'Nachricht gesendet!';
+                    btn.classList.remove('bg-brand-600', 'hover:bg-brand-500');
+                    btn.classList.add('bg-green-600', 'hover:bg-green-500');
+
+                    // Reset form
+                    e.target.reset();
+                    document.getElementById('email2').value = ''; // Reset hidden field too
+
+                    // Re-validate to disable button
+                    checkFormValidity();
+
+                    // Reset button after 3 seconds
+                    setTimeout(() => {
+                        btn.innerText = originalText;
+                        // Validity check handles the state
+                        checkFormValidity();
+                        btn.classList.remove('bg-green-600', 'hover:bg-green-500');
+                        btn.classList.add('bg-brand-600'); // Base class
+                    }, 3000);
+                } else {
+                    throw new Error('Network response was not ok');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                // Error State
+                btn.innerText = 'Fehler. Bitte versuchen Sie es erneut.';
+                btn.classList.remove('bg-brand-600', 'hover:bg-brand-500');
+                btn.classList.add('bg-red-600', 'hover:bg-red-500');
+
+                setTimeout(() => {
+                    btn.innerText = originalText;
+                    btn.disabled = false;
+                    btn.classList.remove('opacity-75', 'cursor-not-allowed', 'bg-red-600', 'hover:bg-red-500');
+                    btn.classList.add('bg-brand-600', 'hover:bg-brand-500');
+                    checkFormValidity();
+                }, 3000);
+            });
+    }
+</script>
